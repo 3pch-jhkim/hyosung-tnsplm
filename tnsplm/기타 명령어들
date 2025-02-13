@@ -1,0 +1,8 @@
+1. 모델링 언인스톨 방법
+	- Windchill Shell -> tools model_uninstall -Dmodel_uninstall.filter=모델링 있는 패키지명 (예시 : com.hyosung.tnsplm.code)
+	- 해당 클래스 폴더 삭제
+	- 이클립스 재실행 -> 프로젝트 클린 -> 서버 재구동
+	
+2. Enum 타입 값 추가 방법
+	- Windchill Shell -> bin -> 	enumCustomize.bat 실행
+	- 관련 클래스 파일 찾아서 값 추가 및 수정

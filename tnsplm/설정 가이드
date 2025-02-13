@@ -1,0 +1,20 @@
+0. Apache 서비스 등록
+	- Shell -> HTTPServer 홈으로 이동
+	- ant -f config.xml installService -DserviceName=Apache2.4 실행
+	
+1. WEB-INF/web.xml 파일 수정
+	- gwt 검색
+	- 아래 <url-pattern>/tnsplm/*</url-pattern> 추가
+	
+2. HTTPServer conf 수정
+	- conf -> templates -> webapp -> webAppAJPConf.template 수정 
+	-   # Add tnsplm #
+  	-		JkMount /@@WEB_APP_NAME@@/tnsplm/* @@AJP_WORKER_NAME@@
+  	-	# Add tnsplm End #
+  	- 추가
+  	- - Shell > HTTPServer > ant -f webAppConfig.xml regenWebAppConf -DappName=Windchill 실행
+  	
+3. mvc.xml 설정 (viewResolver 설정)
+	- 	<property name="prefix" value="/tnsplm/jsp" />
+	-	<property name="suffix" value=".jsp" />
+	- 추가  	

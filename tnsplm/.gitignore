@@ -1,0 +1,15 @@
+/bin/
+
+auth.properties
+
+web.xml
+
+wvs.properties
+
+Windchill.xml
+
+httpd.conf
+
+webAppAJPConf.template
+
+30-app-Windchill-AJP.conf
